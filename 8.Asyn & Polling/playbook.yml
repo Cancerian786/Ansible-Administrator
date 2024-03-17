@@ -1,0 +1,9 @@
+-
+  name: "First Playbook"
+  hosts: all
+  tasks:
+    -
+      name: "Creating file in Client Machine"
+      command: touch /mnt/dummy.txt
+      async: 60
+      poll: 30
