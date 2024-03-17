@@ -1,0 +1,14 @@
+- name: "First Playbook"
+  hosts: webserver
+  tasks:
+    - name: "Creating directory in Client Machine"
+      shell: mkdir -p /tmp/practice
+
+    - name: "Creating file in Client Machine"
+      shell: cp /etc/hosts /tmp/practice/hosts
+
+    - name: "Installing Package in Client Machine"
+      command: yum install nginx -y
+
+    - name: "Installing Package in Client Machine"
+      shell: echo "This is my playbook" > /tmp/practice/file.txt

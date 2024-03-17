@@ -1,0 +1,8 @@
+- name: First Playbook
+  hosts: all
+  tasks:
+    - name: "Creating file in Client Machine"
+      command: mkdir -p /tmp/dummy
+
+    - name: "Creating file in Client Machine"
+      command: touch /tmp/dummy/dummy.txt
