@@ -1,0 +1,10 @@
+-
+  name: "First Playbook"
+  hosts: all
+  tasks:
+    -
+      name: "Installing vsftpd package in Client Machine"
+      apt: name="{{ item }}" state=present
+      with_item:
+        - vsftpd
+        - httpd

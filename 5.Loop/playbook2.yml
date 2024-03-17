@@ -1,0 +1,13 @@
+-
+  name: "First Playbook"
+  hosts: all
+  vars:
+    pkg:
+      - vsftpd
+      - tree
+      - nginx
+  tasks:
+    -
+      name: "Installing vsftpd package in Client Machine"
+      apt: name="{{ item }}" state=present
+      with_items: "{{ pkg }}"
