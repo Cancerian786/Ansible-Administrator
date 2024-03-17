@@ -1,0 +1,8 @@
+-
+  name: "First Playbook"
+  hosts: all
+  serial: 1
+  tasks:
+    -
+      name: "Creating file in Client Machine"
+      apt: name= httpd state=present

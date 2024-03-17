@@ -1,0 +1,8 @@
+-
+  name: "First Playbook"
+  hosts: all
+  strategy: free
+  tasks:
+    -
+      name: "Creating file in Client Machine"
+      apt: name= httpd state=present

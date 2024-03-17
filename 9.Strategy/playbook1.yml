@@ -1,0 +1,16 @@
+- name: "First Playbook"
+  hosts: all
+  strategy: linear
+  tasks:
+    - name: "Creating file in Client Machine"
+      apt: name= httpd state=present
+      ignore_errors: True
+
+    - name: "Creating file in Client Machine"
+      apt: name= ssh state=present
+
+    - name: "Creating file in Client Machine"
+      apt: name= nginx state=present
+
+    - name: "Creating file in Client Machine"
+      apt: name= vsftpd state=present
