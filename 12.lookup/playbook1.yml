@@ -1,0 +1,7 @@
+- name: "First Play"
+  hosts: webserver1
+  vars:
+    ansible_ssh_pass: "{{ lookup('ini', 'password section=webserver1 file=pass.ini') }}"
+  tasks:
+    - name: create a dummy file on webserver
+      command: touch /tmp/lookups_ini.txt
