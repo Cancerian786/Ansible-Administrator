@@ -1,0 +1,8 @@
+- name: "First Playbook"
+  hosts: all
+  tasks:
+    - name: "Creating file in Client Machine"
+      command: touch /mnt/tmp/file.txt
+
+    - name: "Creating file in Client Machine"
+      shell: mkdir -p /mnt/test

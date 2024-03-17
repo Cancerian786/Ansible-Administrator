@@ -1,0 +1,1 @@
+client ansible_host=192.168.0.123 ansible_ssh_pass=sam ansible_connection=ssh ansible_port=22 ansible_user=root
