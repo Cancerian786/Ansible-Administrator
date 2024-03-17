@@ -1,0 +1,13 @@
+-
+  name: "First Playbook"
+  hosts: all
+  strategy: linear
+  tasks:
+    -
+      name: "Creating file in Client Machine"
+      command: touch /mnt/tmp/file.txt
+      ignore_errors: True
+
+    -
+      name: "Creating file in Client Machine"
+      apt: name= httpd state=present
