@@ -1,0 +1,9 @@
+# tasks file for webserver
+
+-
+  name: "Creating file1 in Client Machine"
+  command: touch /mnt/webserve_play1.txt
+
+-
+  name: "Creating file2 in Client Machine"
+  command: touch /mnt/webserve_play2.txt

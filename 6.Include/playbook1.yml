@@ -1,0 +1,7 @@
+-
+  name: "First Playbook"
+  hosts: all
+  vars_files:
+    - var.yml
+  tasks:
+    - include: task.yml
