@@ -1,0 +1,7 @@
+-
+  name: "First Playbook"
+  hosts: all
+  tasks:
+    -
+      name: "Execute Script in Client Machine"
+      script: script.sh user1           # Here User1 is Arguments

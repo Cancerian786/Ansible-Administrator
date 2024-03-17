@@ -1,0 +1,9 @@
+-
+  name: "First Playbook"
+  hosts: all
+  tasks:
+    -
+      name: "Execute Script in Client Machine"
+      service:
+        name: httpd
+        state: started

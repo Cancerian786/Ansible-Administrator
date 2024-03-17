@@ -1,0 +1,7 @@
+-
+  name: "First Playbook"
+  hosts: all
+  tasks:
+    -
+      name: "Creating user"
+      user: name="user1" state=absent remove=yes

@@ -1,0 +1,7 @@
+-
+  name: "First Playbook"
+  hosts: all
+  tasks:
+    -
+      name: "Copy file ink Client Machine"
+      copy: src=file.txt dest=/tmp/ owner=user1 group=user1 mode=0644

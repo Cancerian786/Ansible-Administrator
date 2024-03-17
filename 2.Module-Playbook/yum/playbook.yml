@@ -1,0 +1,7 @@
+-
+  name: "First Playbook"
+  hosts: all
+  tasks:
+    -
+      name: "Creating file in Client Machine"
+      yum: name= httpd state=present

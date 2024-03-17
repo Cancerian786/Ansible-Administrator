@@ -1,0 +1,31 @@
+-
+  name: "First Playbook"
+  hosts: all
+  tasks:
+    -
+      name: "Creating user"
+      user: name="user1" state=present password="P@ssw0rd"
+
+#########################################################################################
+# Generate Password using: mkpasswd --method=sha-512
+#########################################################################################
+-
+  name: "Second Playbook"
+  hosts: all
+  tasks:
+    -
+      name: "Creating User"
+      user: 
+        name="user1" 
+        state=present 
+        password="P@ssw0rd"
+
+##################################################################################
+-
+  name: "Third Playbook"
+  hosts: all
+  tasks:
+    -
+      name: "Deleting user and its home directory"
+      user: name="user1" state=absent remove=yes  #Here Remove option will remove user directory as well
+

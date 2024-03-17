@@ -1,0 +1,7 @@
+-
+  name: "First Playbook"
+  hosts: all
+  tasks:
+    -
+      name: "Copy file ink Client Machine"
+      command: echo "8.8.8.8" | tee -a /tmp/resolv.conf
