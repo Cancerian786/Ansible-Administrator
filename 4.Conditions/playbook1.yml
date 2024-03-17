@@ -1,0 +1,11 @@
+-
+  name: "First Playbook"
+  hosts: all
+  vars:
+    servicename: httpd
+  tasks:
+    -
+      name: "Starting Particular mention service"
+      service:
+        name: {{ servicename }}
+        state: started

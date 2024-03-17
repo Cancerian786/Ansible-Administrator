@@ -1,0 +1,30 @@
+-
+  name: "First Playbook"
+  hosts: all
+  vars:
+    age: 10
+  tasks:
+    -
+      name: "Starting Particular mention service"
+      condition: touch /tmp/file.txt
+      when: age == 10
+
+    -
+      name: "Starting Particular mention service"
+      condition: touch /tmp/dev.txt
+      when: age > 15
+
+    -
+      name: "Starting Particular mention service"
+      condition: touch /tmp/prod.txt
+      when: age < 10
+
+    -
+      name: "Starting Particular mention service"
+      condition: touch /tmp/prod.txt
+      when: age > 10 and age < 15
+
+    -
+      name: "Starting Particular mention service"
+      condition: touch /tmp/prod.txt
+      when: age == 10 or age == 15

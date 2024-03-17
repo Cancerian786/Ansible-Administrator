@@ -1,0 +1,15 @@
+-
+  name: "First Playbook"
+  hosts: all
+  vars:
+    evn: dev
+  tasks:
+    -
+      name: "Starting Particular mention service"
+      condition: touch /tmp/file.txt
+      when: evn == test
+
+    -
+      name: "Starting Particular mention service"
+      condition: touch /tmp/dev.txt
+      when: evn == dev
